@@ -9,7 +9,7 @@ from utils.oauth2 import create_access_token
 router = APIRouter(tags=["authentication"])
 
 
-@router.post("/")
+@router.post("/token")
 def login(
     request: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)
 ):
